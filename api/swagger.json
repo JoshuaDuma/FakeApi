@@ -1,0 +1,58 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Fake Api",
+        "description": "Fake Application API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "tags": ["Home"],
+                "summary": "Get default response",
+                "produces": ["application/json"],
+                "consumes": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/echo": {
+            "get": {
+                "tags": ["Echo"],
+                "summary": "Return your response.",
+                "produces": ["application/json"],
+                "consumes": ["application/json"],
+                "parameters": [{
+                    "name": "Text",
+                    "in": "query",
+                    "description": "Your response text."
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/download": {
+            "get": {
+                "tags": ["Download"],
+                "summary": "Download a file",
+                "consumes": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "basePath": "/"
+}
