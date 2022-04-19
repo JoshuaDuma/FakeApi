@@ -1,0 +1,46 @@
+name: Semantic Release and Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install Dependencies
+        run: npm install -g semantic-release @semantic-release/git
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: semantic-release -e @semantic-release/github
+  rets_docker_release:
+    needs: release
+    name: Docker Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install Dependencies
+        run: sudo apt-get install git -y
+      - name: Login to DigitalOcean
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.REGISTRYUSER }}
+          password: ${{ secrets.REGISTRYPASS }}
+      - name: Build and tag Docker Image.
+        run: |
+          docker build -t fakeapi:latest .
+          docker tag fakeapi:latest socoolbro/fakeapi
+      - name: Push Docker image to public registry.
+        run: docker push socoolbro/fakeapi
