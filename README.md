@@ -95,6 +95,10 @@ To self-host the project using Docker, follow the steps below.
 
 To self-host the project using npm
 
+1. Go to the api directory `cd ./api`.
+2. Download the packages `npm i`.
+3. Run the server `node server.js`.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
