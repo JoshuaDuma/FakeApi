@@ -117,9 +117,7 @@ To view endpoints in SwaggerUI, visit this [link](https://fakeapi.joshuaduma.ca/
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
 - [x] Add back to top links
-- [ ] Add HTTP Methods
 
 See the [open issues](https://github.com/JoshuaDuma/FakeApi/issues) for a full list of proposed features (and known issues).
 
