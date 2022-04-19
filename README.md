@@ -64,7 +64,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is used gather mock data for use in development apps.
+This project is used to gather mock data for use in development apps.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
