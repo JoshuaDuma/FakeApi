@@ -24,7 +24,7 @@
     <a href="https://github.com/JoshuaDuma/FakeApi"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://fakeapi.joshuaduma.ca">View Demo</a>
+    <a href="https://fakeapi.joshuaduma.ca/api-docs">View Demo</a>
     ·
     <a href="https://github.com/JoshuaDuma/FakeApi/issues">Report Bug</a>
     ·
