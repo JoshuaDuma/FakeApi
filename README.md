@@ -91,17 +91,9 @@ To get a local copy up and running follow these simple example steps.
 To self-host the project using Docker, follow the steps below.
 
 1. Run `docker run -p 2084:2084 socoolbro/fakeapi:latest`.
-2. Visit `http://localhost:2084` to start using the api.
-
-To self-host the project using npm
-
-1. Go to the api directory `cd ./api`.
-2. Download the packages `npm i`.
-3. Run the server `node server.js`.
+2. Visit `http://localhost:2084/api-docs` to start using the api.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
